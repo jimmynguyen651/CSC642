@@ -2,5 +2,5 @@
 Group Project
 
 Confirm You're In:
-Jimmy, Andy, Kevin, 
+Jimmy, Andy, Kevin, RJ
 
