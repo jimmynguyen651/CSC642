@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tidbits</title>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="background-beige">
+    <div class="landing-image">
     <div>
         <nav>
             <div class="topnav">
                 <div class="topnav-left">
                   <!-- <a href="./landing.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a> -->
                   <a class="topnav-items" href="">Write a Review</a>
-                  <a class="topnav-items" href="./signup.html">Add a Restaurant</a>
+                  <a class="topnav-items" href="./owner-signup.html">Add a Restaurant</a>
                 </div>
                 <div class="topnav-right">
                   <a class="topnav-items" href="./signup.html">Signup</a>
@@ -24,9 +27,77 @@
               </div>
         </nav>
     </div>
-
-    <img class="logo-top"src="Tidbits-Logo.png"/>
-    <p class="slogan">Find the best restaurants, write and read reviews, wait in line,
+    <img class="logo-top" src="Tidbits-Logo.png"/>
+    <p class="slogan font-weight-bolder">Find the best restaurants, write and read reviews, wait in line,<br/>
         and reserve a table, all in one place.</p>
+    <div class="center">
+        <button class="search-button-2 font-weight-bold" type="button">Find restaurants near me</button>
+        <p class="text-center font-weight-bold mt-2">OR</p> 
+        <input class="input-width" type="text" placeholder="Find"/>
+        <input class="input-width" type="text" placeholder="Location"/>
+        <br/>
+        <button class="search-button mt-4" type="button">Search</button>
+    </div>
+    </div>
+
+    <div class="mt-4">
+        <p class="font-weight-bold text-center text-small">Restaurants Recently Added Nearby</p>
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col">
+                  <div class="container-small">
+                      <div class="small-image"></div>
+                      <div class="ml-2">
+                        <p class="font-weight-bold mt-1">Restaurant 1</p>
+                        <div class="margin-up">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p class="text-smaller d-inline ">10 reviews</p>
+                        </div>
+                        <p class="text-smaller">123 Street Name, San Francisco, CA</p>
+                      </div>
+                      
+                  </div>
+              </div>
+              <div class="col">
+                <div class="container-small">
+                    <div class="small-image"></div>
+                    <div class="ml-2">
+                        <p class="font-weight-bold mt-1">Restaurant 1</p>
+                        <div class="margin-up">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p class="text-smaller d-inline ">20 reviews</p>
+                        </div>
+                        <p class="text-smaller">123 Street Name, San Francisco, CA</p>
+                    </div>
+                </div>
+                
+              </div>
+              <div class="col">
+                <div class="container-small">
+                    <div class="small-image"></div>
+                    <div class="ml-2">
+                        <p class="font-weight-bold mt-1">Restaurant 1</p>
+                        <div class="margin-up">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p class="text-smaller d-inline ">100 reviews</p>
+                        </div>
+                        <p class="text-smaller">123 Street Name, San Francisco, CA</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+    </div>
 </body>
 </html>

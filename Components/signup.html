@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup for Tidbits</title>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
 </head>
@@ -18,13 +19,33 @@
                 </div>
                 <div class="topnav-right">
                   <a class="topnav-items" href="">Write a Review</a>
-                  <a class="topnav-items" href="./signup.html">Add a Restaurant</a>
+                  <a class="topnav-items" href="./owner-signup.html">Add a Restaurant</a>
                   <a class="topnav-items" href="./signup.html">Signup</a>
                   <a class="topnav-items" href="./login.html">Login</a>
                   <a></a>
               </div>
         </nav>
     </div>
-
+    <div class="mt-5">
+        <form>
+            <div class="box background-grey">
+                <h2 class="text-center">Sign Up for Tidbits</h2>
+                <p class="text-small text-center">Have an account? <a href="./login.html" class="font-weight-bold">Log in</a> here!</p>
+                <label class="mt-2 font-weight-bold">First Name</label><p class="red-text">*</p><br/>
+                <input type="text" class="input-full input-up" placeholder="First Name">
+                <label class="mt-2 font-weight-bold">Last Name</label><p class="red-text">*</p><br/>
+                <input type="text" class="input-full input-up" placeholder="Last Name">
+                <label class="mt-2 font-weight-bold">Email</label><p class="red-text">*</p><br/>
+                <input type="text" class="input-full input-up" placeholder="Email">
+                <label class="mt-2 font-weight-bold">Create a Password</label><p class="red-text">*</p><br/>
+                <input type="password" class="input-full input-up" placeholder="Enter password">
+                <label class="mt-2 font-weight-bold">Confirm Password</label><p class="red-text">*</p><br/>
+                <input type="password" class="input-full input-up" placeholder="Re-enter password">
+                <input type="checkbox" class="mt-3">
+                <label class="text-small">By checking this box, you agree to our <a href="#">Terms and Conditions</a></label>
+                <button type="submit" class="search-button mt-3 mb-0">Sign up</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

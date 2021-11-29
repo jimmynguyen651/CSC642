@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to Tidbits</title>
+    <title>Restaurant 1</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div>
@@ -15,6 +16,11 @@
             <div class="topnav">
                 <div class="topnav-left">
                   <a href="./landing.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a>
+                  <div> 
+                    <a><input class="text-small" placeholder="Find"></a>
+                    <a class="search-bar-top search-bar-width"><input class="text-small" placeholder="Location"></a>
+                    <a class="search-bar-top"><button type="submit" class="text-small"><i class="fa fa-search" aria-hidden="true"></i></button></a>
+                  </div>
                 </div>
                 <div class="topnav-right">
                   <a class="topnav-items" href="">Write a Review</a>
@@ -25,19 +31,10 @@
               </div>
         </nav>
     </div>
-
-    <div class="mt-5">
-        <form>
-            <div class="box background-grey">
-                <h2 class="text-center">Login to Tidbits</h2>
-                <p class="text-small text-center">Don't have an account? <a href="./signup.html" class="font-weight-bold">Sign up</a> here!</p>
-                <label class="mt-2 font-weight-bold">Email</label><p class="red-text">*</p><br/>
-                <input type="text" class="input-full input-up" placeholder="Email">
-                <label class="mt-2 font-weight-bold">Password</label><p class="red-text">*</p><br/>
-                <input type="password" class="input-full input-up" placeholder="Enter password">
-                <button type="submit" class="search-button mt-3 mb-0">Log in</button>
-            </div>
-        </form>
+    <div class="banner-hero mt-2">
+        <div class="d-flex align-items-start flex-column">
+            <h1 class="font-weight-bold pl-1 mb-auto">Restaurant 1</h1>
+        </div>
     </div>
 </body>
 </html>
