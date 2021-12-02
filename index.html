@@ -1,291 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-
-  <link rel="stylesheet" href="datasurveycss.css">
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script type="text/javascript">
-    var onloadCallback = function() {
-     
-      console.log("grecaptcha is ready!");
-    };
-  </script>
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-  async defer>
-</script>
-
-  
-  <script type = "text/javascript" defer src = "data.js"></script>
-  <script type = "text/javascript" defer src = "validation.js"></script>
-  <script type = "text/javascript" defer src = "frontend.js"></script>
-  
-  <title></title> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Tidbits</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="resultspage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <form id = "myForm" action ="resultsverificationpage.html" method="get">
-    <!---Page Header-->
-    <section class ="bg-dark text-light p-5 pb-1 text-center text-sm-center">
-        <div class = "container">
-            <div> 
-                <div>
-                    
-                    <h1>Data Survey Form</h1>
-                    <h2>Input your information in the <span class = "text-warning">fields</span> below.</h2>
-                    <!---- <h3><img class ="img-fluid" src = "coolsunglassescat.png"/></h3> --->   
-                    
-                    <h4 class = "pt-2">
-            
-                        <button type = "button"   class ="btn p-1 btn-primary" onclick = "personalSection()" id = "personalbutton" name = "personalbutton">Personal</button>
-                        <i class = "bi bi-arrow-right"></i>
-                        <button type = "button" style = "background-color: #0955A0" class ="btn p-1 btn-primary" onclick = "nextSection()" id = "addressbutton" name = "addressbutton">Address</button>
-                        
-                    </h4>
+    <!---nav bar-->
+    <section>
+        <nav>
+            <div class="topnav">
+                <div class="topnav-left">
+                  <a href="./landing.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a>
+                </div>
+                <div class="topnav-right">
+                    <a class="topnav-items" href="">Write a Review</a>
+                    <a class="topnav-items" href="./signup.html">Add a Restaurant</a>
+                    <a class="topnav-items" href="./signup.html">Signup</a>
+                    <a class="topnav-items" href="./login.html">Login</a>
+                    <a></a>
+              </div>
+        </nav>
+    </section>
 
-                    <div class = "requirement-warning">
-                        <span class=text-danger>* </span> indicates required
-                    </div> 
+    <section id = "sectionpersonal" class = "text-dark p-1 pt-3 text-center text-lg-center"> 
+    <div id = "outerfilterflexbox" >
 
-                    <div style = "font-size: 14px;" class = "pb-4">
-                        Optional fields not required, but need correct format if filled.
-                    </div> 
-                
-                
-                    
+    
+        <div class = "d-flex flex-row">
+            <div id = "filterflexbox" style = "font-size: 20px; text-align: Left;">
+                <i class="bi bi-list-task"></i> Show Filters
             </div>
-        </div>      
+            <div id = "filterflexbox"  style = "font-size: 20px; text-align: right; ">
+                <!---5 spaces on the edges, 3 spaces between numbers-->
+                <i class="bi bi-chevron-left"></i>&emsp13;1&emsp13;2&emsp13;3&emsp13;4&emsp13;5&emsp13;6&emsp13;<i class="bi bi-chevron-right"></i>
+            </div>
+            
+        </div>
+        <div  class = "d-flex flex-row">
+            <div id = "filterflexbox"  style = "text-align: left; margin-top: -20px; font-size: 12px;">
+                1 - 10 out of 123 results for "vegetarian"
+            </div>
+            <div id = "filterflexbox" style = "text-align: right;  margin-top: -20px; font-size: 12px; margin-right: 5px">
+                Sort By: Recommended <i class="bi bi-caret-down-fill"></i>
+            </div>
+            
+        </div>
+    </div> 
+
     </section>
 
-    <!--- Personal Info Section-->
-    
-    <section id = "sectionpersonal" class = "bg-dark text-light p-5 pt-0 text-center text-lg-center"> 
-       
-    </div>
-    
-    
+    <!---Results Section 1--->
+    <section id = "result">
+        <div id = "container">
+           <div  id = "flexbox" class = "d-flex p-2 " >
+            <div id = "innerflexbox" class = "d-flex p-2 justify-content-left ">
 
-    <div class = "nameLabel">
-        <span class = "text-warning">Your Name and Title:</span> 
-    </div> 
- 
-  
-    <div class = "d-sm-flex flex-column justify-content-center" id = "addressforms">
-        <div>
-            <label><span class="text-danger">* </span>Last Name</label>
-            <h5> <input type = "text" onblur="lastnameFunction()" id ="lastname" name ="lastname" placeholder = "Doe" required></h5>
-            <i id = "lastnamecheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "lastnameexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "lastnameerror" style= "font-size: 12px;">Last name must be between 1 and 40 characters.</label> 
             
-        </div>
-        <div>
-            <label><span class="text-danger">* </span>First Name</label>
-            <h5> <input type = "text" onblur= "firstnameFunction()" id ="firstname" name ="firstname" placeholder = "John" required></h5>
-            <i id = "firstnamecheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "firstnameexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "firstnameerror" style= "font-size: 12px;">First name must be between 1 and 40 characters.</label> 
-        </div>   
-    </div>
+             <!---Img Div--->
+               <div>
+                    <img id = "fillerimage" class ="img-fluid" style = "height: 200px;" src = "coolsunglassescat.png">
+               </div>
+                <!---Div containing the restaurant info--->
+                <div name = "restaurant div" style = "padding-left: 10px">
+                    <div id = "restaurant1name" style = "font-size: 36px;">Restaurant 1</div>
+                
+                    <div class = "pb-1"  style = "font-size: 16px; margin-top: -7.5px;">
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill"> 100 Reviews</i>
+                    </div>
 
-    <div class = "d-sm-flex flex-column justify-content-center pt-2 pb-4" name = "addressforms">
-        <div> 
-            <label><span class="text-danger">* </span>Preferred Title&nbsp;</label>
-            <h5>
-            <select name = "title" id = "title" required>
-              <option value ="None">None</option>
-              <option value ="Student">Student</option>
-              <option value ="Professor">Professor</op3ion>
-              <option value ="Staff">Staff</option>
-              <option value ="Retired">Retired</option>
-            </select>
-            </h5>
-        </div>
-    </div>
-
-    <div class = "nameLabel">
-        <span class = "text-warning">Your Height:</span> 
-        
-    </div> 
- 
-
-    <div class = "d-sm-flex flex-column justify-content-center pt-2 pb-4" id = "addressforms">
-        <div>
-            <label><span></span>Feet</label> 
-            <h5> <input type = "text" onblur = "feetFunction()" id = "feet" name = "feet" placeholder = "6"></h5>
-            <i id = "feetcheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "feetexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "feeterror" style= "font-size: 12px;">Feet must be entered as a positive number.</label> 
-            
-        </div>
-        <div>
-            <label><span></span>Inches</label> 
-            <h5><input type = "text" onblur="inchesFunction()" id ="inches" name = "inches" placeholder = "0"></h5>
-            <i id = "inchescheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "inchesexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "incheserror" style= "font-size: 12px;">Inches must be entered as a number between 0 and 12.</label> 
+                    <div style = "background-color: rgba(192, 192, 192, 0.959); font-size: 14px; width: 35%; text-align: center;">
+                            American
+                        </div>
+                    <div class = "pb-1 pt-3" style = "font-size: 16px">
+                        <i class="bi-pin-map-fill"></i> 
+                        Within 1.0 Mile(s)
+                    </div>
+                    <div class = "pb-1"  style = "font-size: 16px">
+                        Live Wait Time: 15 Minutes
+                    </div>
+                    <div style = "font-size: 16px">
+                        <b>Hours: 8AM to 10 PM</b>
+                    </div>
+                </div>
+                 <!---End of restaurant div--->
+               
+                <div  style =  "padding-left: 50px; padding-top: 50px">
+                    <div>
+                        Quick Info
+                    </div>
+                    <div class = "padding-top: -20000px;">
+                       <hr style = "width: 100%; margin: 0 auto; margin-top: 5px;">
+                    </div>
+                    <div id = "quickinfoouterflexbox" class = "d-flex flex-row">
+                        
+                        <div id = "quickinfoinnerflexbox" class = "d-flex flex-column">
+                            
+                            <div>
+                                <i class="bi bi-x-circle" style = "color: red"></i> Proof of Vaccination
+                            </div>
+                            
+                            <div>
+                                <i class="bi bi-x-lg" style = "color: red"></i> Not Allergy-Safe
+                            </div>
+                        
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Pets Welcome
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+                 
+                   
+                </div>
+                <div class = "d-flex flex-column pt-5 d-none d-lg-block">
+                    <button id = "resultbuttons"style = "background-color: #FFEBB1; color: black;"type="button" class="btn btn-primary ml-auto p-2">Reservation</button>
+                    <div name = "filler"class = "pt-2 pb-2"></div>
+                <button id = "resultbuttons" style = "background-color: green" type = "button" class="btn btn-primary ml-auto p-2">Waitlist</button>
+                </div>
+                
+            </div name = "endofinnerflex">
+           </div>
            
-        </div>   
-    </div>
-
-    <div class = "nameLabel">
-        <span class = "text-warning">Your Contact Information:</span> 
-    </div> 
- 
-  
-    <div class = "d-sm-flex flex-column justify-content-center" id = "addressforms">
-        <div>
-            <label><span class="text-danger">* </span>Email</label>
-            <h5> <input type = "text" onblur="emailFunction()" id ="useremail" name ="useremail" placeholder = "kazumakiryu@dojima.net" required></h5>
-            <i id = "emailcheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "emailexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "emailerror" style= "font-size: 12px;">Please enter a valid email.</label> 
-        
         </div>
-
-        <div>
-            <label>Phone Number</label>
-            <h5>  <input type = "text" onblur = "phonenumberFunction()" id= "phonenumber" name ="phonenumber" placeholder = "(123)456789"></h5>
-            <i id = "phonenumbercheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "phonenumberexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "phonenumbererror" style= "font-size: 12px;">Please enter a valid phone number in the given format.</label> 
-        
-        </div>
-
-        
-
-        
-          
-    </div>
-
-    <div class = "d-sm-flex flex-column justify-content-center pt-4" name = "addressforms">
-        <div class = "pb-2">
-              <button type = "button" onclick = "nextSection()" class ="btn p-1 btn-primary" name = "addressbutton">Next Section</button>
-              
-        </div>
-        <i id = "personalexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-        <label id = "personalerror" style= "font-size: 12px;">There is an error, fields are not confirmed, or you have not filled a necessary field out.</label> 
-          
-    </div>
-
     </section>
 
-     
+    <!---Results Section 2--->
+    <section id = "result">
+        <div id = "container">
+           <div  id = "flexbox" class = "d-flex p-2 " >
+            <div id = "innerflexbox" class = "d-flex p-2 justify-content-left ">
 
-    <!---Address Section -->
-    <section id = "sectionaddress" class = "bg-dark text-light p-5 pt-0 text-center text-lg-center"> 
- 
-  
-    
-
-
-    <div class = "nameLabel pb-3">
-        <span class = "text-warning">Services Inquiry:</span> 
-    </div> 
-
-      
-    <div class = "d-sm-flex flex-column justify-content-center" id = "addressforms">
-        <div>
-            <label><span class="text-danger">* </span>Street Address</label>
-            <h5> <input type = "text" onblur="streetaddressFunction()" id ="streetaddress" name ="streetaddress" placeholder = "123 Real Street" required></h5>
-            <i id = "streetaddresscheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "streetaddressexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "streetaddresserror" style= "font-size: 12px;">Enter a valid street address under 40 characters.</label> 
             
+             <!---Img Div--->
+               <div>
+                    <img id = "fillerimage" class ="img-fluid" style = "height: 200px;" src = "coolsunglassescat.png">
+               </div>
+                <!---Div containing the restaurant info--->
+                <div name = "restaurant div" style = "padding-left: 10px">
+                    <div id = "restaurant1name" style = "font-size: 36px;">Restaurant 2</div>
+                
+                    <div class = "pb-1"  style = "font-size: 16px; margin-top: -7.5px;">
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill"> 100 Reviews</i>
+                    </div>
+
+                    <div style = "background-color: rgba(192, 192, 192, 0.959); font-size: 14px; width: 35%; text-align: center;">
+                            American
+                        </div>
+                    <div class = "pb-1 pt-3" style = "font-size: 16px">
+                        <i class="bi-pin-map-fill"></i> 
+                        Within 1.0 Mile(s)
+                    </div>
+                    <div class = "pb-1"  style = "font-size: 16px">
+                        Live Wait Time: 15 Minutes
+                    </div>
+                    <div style = "font-size: 16px">
+                        <b class = "text-danger">CLOSED until 5:00PM</b>
+                    </div>
+                </div>
+                 <!---End of restaurant div--->
+               
+                <div  style =  "padding-left: 50px; padding-top: 50px">
+                    <div>
+                        Quick Info
+                    </div>
+                    <div class = "padding-top: -20000px;">
+                       <hr style = "width: 100%; margin: 0 auto; margin-top: 5px;">
+                    </div>
+                    <div id = "quickinfoouterflexbox" class = "d-flex flex-row">
+                        
+                        <div id = "quickinfoinnerflexbox" class = "d-flex flex-column">
+                            
+                            <div>
+                                <i class="bi bi-x-circle" style = "color: red"></i> Proof of Vaccination
+                            </div>
+                            
+                            <div>
+                                <i class="bi bi-x-lg" style = "color: red"></i> Not Allergy-Safe
+                            </div>
+                        
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Outdoor Seating
+                            </div>
+                        </div>
+
+                        <div id = "quickinfoinnerflexbox" class = "d-flex flex-column">
+                            
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Wheelchair Accessible
+                            </div>
+                            
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Parking Lot
+                            </div>
+                        
+                           
+                        </div>
+                        
+                    </div>
+
+                    
+                    
+                    
+                </div>
+                 
+                   
+                </div>
+                <div class = "d-flex flex-column pt-5">
+                    <button id = "resultbuttons"style = "background-color: #FFEBB1; color: black;"type="button" class="btn btn-primary ml-auto p-2">Reservation</button>
+                    <div name = "filler"class = "pt-2 pb-2"></div>
+                <button id = "resultbuttons" style = "background-color: green" type = "button" class="btn btn-primary ml-auto p-2">Waitlist</button>
+                </div>
+                
+            </div name = "endofinnerflex">
+           </div>
+           
         </div>
+    </section>
 
-        <div>
-            <label><span class="text-danger">* </span>City</label>
-            <h5> <input type = "text" onblur="cityFunction()" id ="city" name ="city" placeholder = "San Francisco" required></h5>
-            <i id = "citycheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "cityexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "cityerror" style= "font-size: 12px;">Enter a valid city under 40 characters. </label> 
-            
-        </div>
+    <!---Results Section 3--->
+    <section id = "result">
+        <div id = "container">
+           <div  id = "flexbox" class = "d-flex p-2 " >
+            <div id = "innerflexbox" class = "d-flex p-2 justify-content-left ">
 
-        <div>
             
-            <label><span class="text-danger">* </span>Zip Code</label>
-            <h5> <input type = "text" onblur="zipcodeFunction()" id ="zipcode" name ="zipcode" placeholder = "12345" required></h5>
-            <i id = "zipcodecheck" class = "bi bi-check-circle" style = "color:green"></i>
-            <i id = "zipcodeexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-            <label id = "zipcodeerror" style= "font-size: 12px;">Enter a Zip Code that is 5 positive numbers.</label> 
-            
+             <!---Img Div--->
+               <div>
+                    <img id = "fillerimage" class ="img-fluid" style = "height: 200px;" src = "coolsunglassescat.png">
+               </div>
+                <!---Div containing the restaurant info--->
+                <div name = "restaurant div" style = "padding-left: 10px">
+                    <div id = "restaurant1name" style = "font-size: 36px;">Restaurant 3</div>
+                
+                    <div class = "pb-1"  style = "font-size: 16px; margin-top: -7.5px;">
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill" style = "color: gold;"></i>
+                        <i class="bi bi-star-fill"> 100 Reviews</i>
+                    </div>
+
+                    <div style = "background-color: rgba(192, 192, 192, 0.959); font-size: 14px; width: 35%; text-align: center;">
+                            American
+                        </div>
+                    <div class = "pb-1 pt-3" style = "font-size: 16px">
+                        <i class="bi-pin-map-fill"></i> 
+                        Within 1.0 Mile(s)
+                    </div>
+                    <div class = "pb-1"  style = "font-size: 16px">
+                        Live Wait Time: 15 Minutes
+                    </div>
+                    <div style = "font-size: 16px">
+                        <b class = "text-danger">CLOSED until 5:00PM</b>
+                    </div>
+                </div>
+                 <!---End of restaurant div--->
+               
+                <div  style =  "padding-left: 50px; padding-top: 50px">
+                    <div>
+                        Quick Info
+                    </div>
+                    <div class = "padding-top: -20000px;">
+                       <hr style = "width: 100%; margin: 0 auto; margin-top: 5px;">
+                    </div>
+                    <div id = "quickinfoouterflexbox" class = "d-flex flex-row">
+                        
+                        <div id = "quickinfoinnerflexbox" class = "d-flex flex-column">
+                            
+                            <div>
+                                <i class="bi bi-x-circle" style = "color: red"></i> Proof of Vaccination
+                            </div>
+                            
+                            <div>
+                                <i class="bi bi-x-lg" style = "color: red"></i> Not Allergy-Safe
+                            </div>
+                        
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Outdoor Seating
+                            </div>
+                        </div>
+
+                        <div id = "quickinfoinnerflexbox" class = "d-flex flex-column">
+                            
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Wheelchair Accessible
+                            </div>
+                            
+                            <div>
+                                <i class="bi bi-check2" style = "color: green"></i> Parking Lot
+                            </div>
+                        
+                           
+                        </div>
+                        
+                    </div>
+
+                    
+                    
+                    
+                </div>
+                 
+                   
+                </div>
+                <div class = "d-flex flex-column pt-5">
+                    <button id = "resultbuttons"style = "background-color: #FFEBB1; color: black;"type="button" class="btn btn-primary ml-auto p-2">Reservation</button>
+                    <div name = "filler"class = "pt-2 pb-2"></div>
+                <button id = "resultbuttons" style = "background-color: green" type = "button" class="btn btn-primary ml-auto p-2">Waitlist</button>
+                </div>
+                
+            </div name = "endofinnerflex">
+           </div>
+           
         </div>
-    </div>
- 
-  
-    <div class = "pt-4">
-        <label class = "text-warning pb-2" style = >Select all the services you require below. </label>
-    <h5>
-        <input type = "checkbox"id="checkboxemail" value = "checkboxemail" onclick="checkboxemailFunction()"> Email 
-    
-        <input type = "checkbox"id ="surfacemail" value = "surfacemail" onclick="surfacemailFunction()"> Surface Mail
-        <input type = "checkbox"id ="phone" value = "phone" onclick="phoneFunction()"> Phone 
+    </section>
+
+
+
         
-        </h5>
-    <h5> <input type = "checkbox"id ="tweeter" value = "tweeter" onclick="tweeterFunction()"> Tweeter
-        <input type ="checkbox"id ="facebook" value = "facebook" onclick="facebookFunction()"> Facebook
-         <input type = "checkbox"id ="personalvisit" value = "personalvisit" onclick="personalvisitFunction()"> Personal Visit
-        </h5>
-        
-    </div>
 
-      <div class = "d-sm-flex flex-column justify-content-center pt-2 pb-4" name = "addressforms">
-        <div> 
-            <label><label><span class="text-danger">* </span> Select monthly budget for services</label>
-            <h5 style = "font-size: 16px;">
-            <select name = "budget" id = "budget" required>
-              <option value ="Less than $50">Less than $50</option>
-              <option value ="Between $50 and $100">Between $50 and $100</option>
-              <option value ="Above $100">Above $100</op3ion>
-              
-            </select>
-            </h5>
-            
-        </div>
-        <label class = "text-warning pt-3"> Please complete the captcha below to be able to submit.</label>
-      <div style = "margin: 0 auto" id = "recaptcha" class = "g-recaptcha" data-sitekey ="6LfotUYdAAAAAFBe7qQEqCpsS00bpafOVIrpRGjS" required></div>
-      
        
-       <div class = "pt-4">
-            By checking this, you agree to the <a href = "https://imgur.com/a/NYidHlo">terms.</a> <input type = "checkbox" id = "acceptterms" name ="acceptterms" required>
-            
-          </div>
-          <div id = "termserror">
-              You must indicate you accept the terms above to submit.
-          </div>
-         
-  
-        </div>
         
-        
-
-
-          
-    </div>
-
-    <div class = "d-sm-flex justify-content-center pt-4" name = "addressforms">
-        <div>
-              <button type = "button" onclick = "personalSection()" class ="btn p-1 btn-primary" name = "addressbutton">Go Back</button>
-              <button type = "submit" onclick = "addresssubmitcheck(event)" class ="btn p-1 btn-primary" id = "submitdata" name = "addressbutton">&nbsp;Submit&nbsp;</button>
-          </div>
-         
-
-    </div>
-    <i id = "submitexclamation" class = "bi bi-exclamation-circle" style = "color:red" ></i>
-    <label id = "submiterror" style= "font-size: 12px;">There is an error, fields are not confirmed, or you have not filled a necessary field out.</label> 
-
-    </section>
-
-   
-
+      
+      
 
     
-   </form>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
