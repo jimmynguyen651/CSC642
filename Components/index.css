@@ -200,7 +200,7 @@
 .banner-hero {
     margin: 0 auto;
     width: 98%;
-    height: 350px;
+    height: 60%;
     border-style: solid;
     border-radius: 15px;
     border-color: black;
@@ -375,7 +375,7 @@ a
 .cal-box {
     /* margin: 0 auto; */
     width: 80%;
-    height: 230px;
+    height: 40%;
     border-style: solid;
     border-radius: 3px;
     border-color: black;
@@ -387,7 +387,7 @@ a
 .wait-box {
     /* margin: 0 auto; */
     width: 80%;
-    height: 160px;
+    height: 30% !important;
     border-style: solid;
     border-radius: 3px;
     border-color: black;
@@ -407,13 +407,14 @@ a
 }
 
 .waitlist-button-g {
-    width: 200px;
+    width: 50%;
     background-color: #238823;
     border-radius: 3px;
     border-width: 1px;
     color: white;
-    height: 34px !important;
+    padding: 5px 5px 5px 5px;
     border-style: none;
+    margin-bottom: 15px !important;
 }
 
 .select-full {
@@ -429,4 +430,20 @@ a
     border-style: solid;
     border: none;
     text-align: center;
+}
+
+
+.reserve-select {
+    width: 70% !important;
+}
+
+.reserve-button{
+    width: 50%;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    /* border-style: none; */
+    margin-bottom: 15px !important;
 }

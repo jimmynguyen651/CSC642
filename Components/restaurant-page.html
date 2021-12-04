@@ -22,7 +22,7 @@
                   </div>
                 </div>
                 <div class="topnav-right">
-                  <a class="topnav-items" href="">Write a Review</a>
+                  <a class="topnav-items" href="./write-review-search.html">Write a Review</a>
                   <a class="topnav-items" href="./owner-signup.html">Add a Restaurant</a>
                   <a class="topnav-items" href="./signup.html">Signup</a>
                   <a class="topnav-items" href="./login.html">Login</a>
@@ -55,7 +55,7 @@
         <div class="col-12 col-sm-6 col-md-8">
             <div class="pl-1 pt-3">
                 <button class="mt-2 pr-2 review-button d-inline-block font-weight-bold"><p class="fa fa-star pt-2"></p> Write a Review</button>
-                <button class="mt-2 ml-1 waitlist-button"><p class="fa fa-list-ol pt-2"></p> Get on Waitlist</button>
+                <a href="waitlist.html"><button class="mt-2 ml-1 waitlist-button"><p class="fa fa-list-ol pt-2"></p> Get on Waitlist</button></a>
                 <h4 class="mt-3 pl-1 font-weight-bold">Phone Number, Location, Hours</h4>
                 <div class="plh-box">
                     <div class="row">
@@ -69,7 +69,7 @@
                                 <button class="copy-address">Copy Address</button>
                             </div>
                         </div>
-                        <div class="col pt-2">
+                        <div class="col pt-2 pl-5">
                             <p class="font-weight-bold">Sun 8:00 AM - 8:00 PM</p>
                             <p class="font-weight-bold margin-ml-up">Sun      8:00 AM - 8:00 PM</p>
                             <p class="font-weight-bold margin-ml-up">Sun 8:00 AM - 8:00 PM</p>
@@ -78,22 +78,13 @@
                             <p class="font-weight-bold margin-ml-up">Sun 8:00 AM - 8:00 PM</p>
                             <p class="font-weight-bold margin-ml-up">Sun 8:00 AM - 8:00 PM</p>
                         </div>
-                        <!-- <div class="col-4 pt-2">
-                            <p class="font-weight-bold">8:00 AM - 8:00 PM</p>
-                            <p class="font-weight-bold margin-ml-up">8:00 AM - 8:00 PM</p>
-                            <p class="font-weight-bold margin-ml-up">8:00 AM - 8:00 PM</p>
-                            <p class="font-weight-bold margin-ml-up">8:00 AM - 8:00 PM</p>
-                            <p class="font-weight-bold margin-ml-up">8:00 AM - 8:00 PM</p>
-                            <p class="font-weight-bold margin-ml-up">8:00 AM - 8:00 PM</p>
-                            <p class="font-weight-bold margin-ml-up">8:00 AM - 8:00 PM</p>
-                        </div> -->
                     </div>
                 </div>
                 <h4 class="pl-1 font-weight-bold pt-5">Reviews</h4>
                 <div class="review-box">
-                    <p class="pl-3 pt-2 font-weight-bold">Create a new review</p>
-                    <p class="pl-3 margin-ml-up text-small">How would you rate your experience?</p>
-                    <div class="margin-up pl-3 pt-2">
+                    <p class="pl-4 pt-2 font-weight-bold">Create a new review</p>
+                    <p class="pl-4 margin-ml-up text-small">How would you rate your experience?</p>
+                    <div class="margin-up pl-4 pt-2">
                         <span class="fa fa-star white-star unchecked-grey"></span>
                         <span class="fa fa-star white-star unchecked-grey"></span>
                         <span class="fa fa-star white-star unchecked-grey"></span>
@@ -107,12 +98,13 @@
                         </div>
                     </div>
                 </div>
-
+                <hr class="background-grey mt-4"/>
                 <!--rest of reviews -->
-                <div class="pt-5">
+                <div class="pt-2">
                     <div class="review-box-user">
                         <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
                         <p class="d-inline-block font-weight-bold">Joe Joberson</p>
+                        <p class="d-inline-block text-small"> • 12/01/2021</p>
                         <div class="margin-up pl-4 pt-2">
                             <span class="fa fa-star white-star unchecked-grey"></span>
                             <span class="fa fa-star white-star unchecked-grey"></span>
@@ -128,6 +120,7 @@
                     <div class="review-box-user">
                         <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
                         <p class="d-inline-block font-weight-bold">Jane Anthony</p>
+                        <p class="d-inline-block text-small"> • 07/29/2021</p>
                         <div class="margin-up pl-4 pt-2">
                             <span class="fa fa-star white-star unchecked-grey"></span>
                             <span class="fa fa-star white-star unchecked-grey"></span>
@@ -143,6 +136,7 @@
                     <div class="review-box-user">
                         <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
                         <p class="d-inline-block font-weight-bold">Alicia Anderson</p>
+                        <p class="d-inline-block text-small"> • 05/21/2021</p>
                         <div class="margin-up pl-4 pt-2">
                             <span class="fa fa-star white-star unchecked-grey"></span>
                             <span class="fa fa-star white-star unchecked-grey"></span>
@@ -152,6 +146,7 @@
                         </div>
                         <p class="ml-4 mr-4 pt-2">The food was alright, the service was great. I'd say for the price, it's worth trying once. If you do, I recommend trying the mascarpone and the grilled pineapple chicken.</p>
                     </div>
+                    <div class="pb-5"></div>
                 </div>
             </div>
         </div>
@@ -159,14 +154,37 @@
         <div class="col-6 col-md-4 pl-4">
             <div class="pt-3 position-relative">
                 <div class="cal-box">
-                    <h5 class="text-center font-weight-bold pt-2">Make a Reservation</h5>
+                    <h5 class="text-center font-weight-bold pt-3">Make a Reservation</h5>
+                    <label for="start" class="pl-5 pt-3 font-weight-bold pr-2">Date</label>
+                    <input type="date" id="start" name="trip-start"
+                        value="2021-12-01"
+                        min="2018-01-01" max="2022-05-21"><br/>
+                    <label for="time" class="pl-5 font-weight-bold pr-2">Time</label>
+                    <input type="time" id="start" name="trip-start"
+                        value="2021-12-01"
+                        min="2018-01-01" max="2022-05-21"><br/>
+                    <label for="party-size" class="pl-5 font-weight-bold pr-2">Party</label>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>  
+                    <br/>
+                    <div class="text-center pt-2"> 
+                        <button type="button" class="reserve-button">Find a Table</button>
+                    </div>
+                    
                 </div>
                 <div class="wait-box">
                     <h5 class="text-center font-weight-bold pt-4">Current Wait Times</h5>
                     <div class="text-center">
                         <p id="time"class="font-weight-bold pt-2 d-inline-block"></p>
                         <p class="font-weight-normal pl-3 d-inline-block">30-60 mins</p>
-                        <button class="waitlist-button-g">Add name to waitlist</button>
+                        <a href="waitlist.html"><button class="waitlist-button-g">Add name to waitlist</button></a>
                     </div>
                     <script>
                         var dt = new Date();
