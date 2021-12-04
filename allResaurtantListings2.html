@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="admincss/allRestaurantListings.css" />
+    <link rel="stylesheet" href="admincss/adminnavbar.css" />
+
+    <!-- Title -->
+    <title>All Restaurants</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/502/502491.png" />
+
+    <!--JS Linking-->
+    <script type="text/javascript" src="adminjs/allRestaurantListings.js"></script>
+    <script type="text/javascript" src="adminjs/adminHomePage.js"></script>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <nav>
+            <ul class="home-list">
+                <li class="nav-item dropdown">
+                    <!--nav-link in the class to show case whole button-->
+                    <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon" />
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                        <a class="dropdown-item" href="pendingRestaurantListings.html">
+                            Pending Restaurant Submissions
+                          </a>
+                          <a class="dropdown-item" href="allRestaurantListings.html">
+                            View All Restaurant Approvals
+                          </a>
+                          <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                            Flagged Reviews
+                          </a>
+                          <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                            User Accounts
+                          </a>
+                          <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                            Account Settings
+                          </a>
+                          <a class="dropdown-item" href="supportPage.html">
+                            Support
+                          </a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="landing.html">
+                            Log Out
+                          </a>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div class="top-nav-logo">
+                        <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo" /></a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <h1 style="text-align: center;">List of All Approved Restuarants</h1>
+
+        <!-- Search form -->
+        <div class="d-flex" style="margin-top: 7%; margin-bottom: -2%;">
+            <div class="mr-auto p-2">
+                <form id="form_search" name="form_search" method="get" action="" class="form-inline">
+                    <div class="form-group">
+                        <div class="input-group">
+
+                            <span><h3 class="mx-2">Search:</h3></span>
+
+                            <input class="form-control" type="text" placeholder="Enter Restaurant/Locations" 
+                            aria-label="Search" onkeyup="checkForRestaurant()" id="searchRestaurant" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="p-2">
+              <p style="font-weight: bold;" class="numberResults">7-12 out of 18 results</p>
+            </div>
+
+            <div class="p-2">
+                <span>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="allRestaurantListings.html" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+                </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="allRestaurantListings.html">1</a></li>
+                <li class="page-item active"><a class="page-link" href="allResaurtantListings2.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="allResaurtantListings3.html">3</a></li>
+                <li class="page-item ">
+                    <a class="page-link" href="allResaurtantListings3.html" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+                </ul>
+                </span>
+            </div>
+        </div>
+
+        <div id="searchThruCards">
+            <div class="card">
+                <img src="adminimgs/coolsunglassescat.png" class="card-img-top" alt="img of restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Scoma's Restaurant</h5>
+                    <p class="card-text location">San Francisco, California</p>
+                    <p class="card-text">Phone Number: (415)-771-4383</p>
+                    <p class="card-text">Approved On Site: November 28, 2021</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#takeActionOnRest" id="takeactionButton">Take Action</button>
+                    <a href="#" class="btn btn-primary">View Restaurant Info</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adminimgs/coolsunglassescat.png" class="card-img-top" alt="img of restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Greens</h5>
+                    <p class="card-text location">San Francisco, California</p>
+                    <p class="card-text">Phone Number: (415)-771-6222</p>
+                    <p class="card-text">Approved On Site: November 28, 2021</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#takeActionOnRest" id="takeactionButton">Take Action</button>
+                    <a href="#" class="btn btn-primary">View Restaurant Info</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adminimgs/coolsunglassescat.png" class="card-img-top" alt="img of restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Broad Street Oyster Company</h5>
+                    <p class="card-text location">Los Angeles, California</p>
+                    <p class="card-text">Phone Number: (424)-644-0131</p>
+                    <p class="card-text">Approved On Site: November 28, 2021</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#takeActionOnRest" id="takeactionButton">Take Action</button>
+                    <a href="#" class="btn btn-primary">View Restaurant Info</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adminimgs/coolsunglassescat.png" class="card-img-top" alt="img of restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Sam Wo</h5>
+                    <p class="card-text location">San Francisco, California</p>
+                    <p class="card-text">Phone Number: (415)-989-8898</p>
+                    <p class="card-text">Approved On Site: November 29, 2021</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#takeActionOnRest" id="takeactionButton">Take Action</button>
+                    <a href="#" class="btn btn-primary">View Restaurant Info</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adminimgs/coolsunglassescat.png" class="card-img-top" alt="img of restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Honey Salt</h5>
+                    <p class="card-text location">Las Vegas, Nevada</p>
+                    <p class="card-text">Phone Number: (702)-445-6100</p>
+                    <p class="card-text">Approved On Site: November 29, 2021</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#takeActionOnRest" id="takeactionButton">Take Action</button>
+                    <a href="#" class="btn btn-primary">View Restaurant Info</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="adminimgs/coolsunglassescat.png" class="card-img-top" alt="img of restaurant">
+                <div class="card-body">
+                    <h5 class="card-title">Superdawg Drive-In</h5>
+                    <p class="card-text location">Chicago, Illinois</p>
+                    <p class="card-text">Phone Number: (773)-763-0660</p>
+                    <p class="card-text">Approved On Site: November 30, 2021</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#takeActionOnRest" id="takeactionButton">Take Action</button>
+                    <a href="#" class="btn btn-primary">View Restaurant Info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="takeActionOnRest" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Are you sure you want to see the list of actions?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        A list of possible actions to take against the restaurant will appear.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#listofRestuarantsActions" data-dismiss="modal">YES</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">NO, CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <span>
+          <nav>
+            <ul class="pagination justify-content-center" style="margin-top: 3%;" id="bottomPagination">
+              <li class="page-item">
+                <a class="page-link" href="allResaurtantListings.html" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                  </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="allRestaurantListings.html">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="allResaurtantListings2.html">2</a></li>
+                  <li class="page-item"><a class="page-link" href="allResaurtantListings3.html">3</a></li>
+                  <li class="page-item">
+                      <a class="page-link" href="allResaurtantListings3.html" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </li>
+                  </ul>
+                  </span>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="listofRestuarantsActions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">List of Possible Actions to Take</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Check the Actions you would like to take</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+              Place Strike For Violating TOS of Tidbits
+            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                            <label class="form-check-label" for="flexCheckDefault1">
+              Place Alert tag due to Health Violations
+            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                            <label class="form-check-label" for="flexCheckDefault2">
+              Restaurant Closed
+            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#savedChanges" data-dismiss="modal">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="savedChanges" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Changes Saved!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body">
+                        Actions against the restaurant have been saved! An email will be sent notifying the restuarant about the changes!
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-success" data-dismiss="modal">Exit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
