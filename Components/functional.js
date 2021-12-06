@@ -31,8 +31,6 @@ function loginAdmin() {
 
     if (login === "kevin@tidbits.com") {
         // console.log("redirect");
-        location.href = "./restaurant-page.html"
-    } else {
-        location.href = "./landing.html"
-    }
+        location.href = "./adminHomePage.html"
+    } 
 }
