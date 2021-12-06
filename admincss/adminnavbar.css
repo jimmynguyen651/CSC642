@@ -1,0 +1,33 @@
+/*overall page layout*/
+body{
+    background-color: aliceblue;
+}
+
+/*to do with navbar*/
+.topnav{
+    background-color:#F5BD1F;
+    height: 68px;
+    width: 100%;
+    
+}
+
+/*to do with hamburger icon*/
+.topnav-img-burger-icon{
+    max-height: 90px;
+    max-width: 70px;
+    margin-left: -50px;
+}
+
+
+.dropdown-menu{
+    margin-left: -40px;
+}
+
+/*to do with logo*/
+.topnav-img-logo{
+    max-width: 150px;
+}
+
+.home-list li{
+    display: inline-block;
+}

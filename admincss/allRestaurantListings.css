@@ -1,0 +1,24 @@
+.card{
+    margin-top: 3%;
+    flex-direction: row;
+    border-radius: 10px;
+    border-color: black;
+
+}
+
+.card img {
+    width: 20%;
+}
+
+.container{
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.inputMargin{
+    margin-top: 7%;
+}
+
+.noActionHover{
+    pointer-events: none;
+}

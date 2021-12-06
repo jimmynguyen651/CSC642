@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="admincss/userAccountsListings.css" /> 
+    <link rel="stylesheet" href="admincss/adminnavbar.css" />
+
+    <!-- Title -->
+    <title>User Accounts</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/502/502491.png" />
+
+    <!--JS Linking-->
+    <script type="text/javascript" src="adminjs/adminHomePage.js"></script>
+
+
+
+</head>
+<body>
+  <div class="topnav">
+    <nav>
+        <ul class="home-list">
+            <li class="nav-item dropdown">
+                <!--nav-link in the class to show case whole button-->
+                <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon"/>
+                </a>
+                
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                  <a class="dropdown-item" href="pendingRestaurantListings.html">
+                    Pending Restaurant Submissions
+                  </a>
+                  <a class="dropdown-item" href="allRestaurantListings.html">
+                    View All Restaurant Approvals
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    Flagged Reviews
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    User Accounts
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    Account Settings
+                  </a>
+                  <a class="dropdown-item" href="supportPage.html">
+                    Support
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="landing.html">
+                    Log Out
+                  </a>
+                </div>
+  
+            </li>
+
+            <li>
+              <div class="top-nav-logo">
+                <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo"/></a>
+              </div>
+            </li>
+
+        </ul>
+
+    </nav>
+</div>
+
+<div class="container">
+  <h1 style="text-align: center; margin-top: 4%; margin-bottom: 4%;">Feature Under Development!</h1>
+  <img class="center" src="adminimgs/pageBuilding.jpg"/>
+</div>
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+    
+</body>
+</html>

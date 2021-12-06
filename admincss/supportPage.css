@@ -1,0 +1,16 @@
+.cardo {
+    width:fit-content;
+    border-radius: 10px;
+    border: solid black;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.section{
+    margin-top: 3%;
+}
+
+.container{
+    margin-bottom: 5%;
+}
