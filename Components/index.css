@@ -18,7 +18,8 @@
 }
 
 .input-width {
-    width: 399px !important;
+    width: 45% !important;
+    margin-left: 2px;
     height: 38px;
     border-color: black;
     border-width: 1px;
