@@ -448,3 +448,7 @@ a
     /* border-style: none; */
     margin-bottom: 15px !important;
 }
+
+.nav-link:hover{
+    color: white !important;
+}

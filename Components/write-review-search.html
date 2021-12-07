@@ -12,18 +12,38 @@
 </head>
 <body class="background-beige">
     <div>
-        <nav>
-            <div class="topnav">
-                <div class="topnav-left">
-                  <!-- <a href="./landing.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a> -->
-                  <a class="topnav-items" href="./write-review-search.html">Write a Review</a>
-                  <a class="topnav-items" href="./owner-signup.html">Add a Restaurant</a>
-                </div>
-                <div class="topnav-right">
-                  <a class="topnav-items" href="./signup.html">Signup</a>
-                  <a class="topnav-items" href="./login.html">Login</a>
-                  <a></a>
-              </div>
+        <nav class=" nav navbar navbar-expand-lg navbar-light" style="background-color: #F5BD1F;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left: 2%;">
+                <li class="nav-item">
+                    <a href="./landing.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a>
+                </li>
+                <li class="nav-item">
+                    <div class="pt-1 pl-4"> 
+                        <a><input class="text-small" placeholder="Find"></a>
+                        <a class="search-bar-top search-bar-width pl-4"><input class="text-small" placeholder="Location"></a>
+                        <a class="search-bar-top"><button type="submit" class="text-small"><i class="fa fa-search" aria-hidden="true"></i></button></a>
+                      </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-right" style="margin-left: 2%; margin-right: 2%;">
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./write-review-search.html">Write a Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./owner-signup.html">Add a Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./login.html">Login</a>
+                </li>
+            </ul>
+            </div>
         </nav>
     </div>
     <h4 class="text-center font-weight-bolder pt-5">The Best Reviews Start Here</h4>
