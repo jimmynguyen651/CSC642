@@ -101,7 +101,7 @@
 }
 
 .small-image {
-    width: 348px;
+    width: 100%;
     border-radius: 5px;
     height: 110px;
     background-color: lightgrey;
