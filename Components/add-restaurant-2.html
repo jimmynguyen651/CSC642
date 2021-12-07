@@ -7,6 +7,7 @@
     <title>Add a Restaurant</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="./functional.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -51,13 +52,22 @@
                 <a class="none text-white" href="add-restaurant-4.html"><li>Account</li></a>
               </ul><br>
         </div>
-        <div class="container-wide mt-1">
-            <label class="font-weight-bold mt-4">Phone</label><p class="red-text">*</p><br/>
-            <input type="text" class="input-full margin-up" placeholder="(000) 000-000"/>
-            <label class="font-weight-bold mt-2">Website</label><p class="red-text">*</p><br/>
-            <input type="text" class="input-full margin-up" placeholder="www.website.com"/>
-            <label class="font-weight-bold mt-2">Hours</label><p class="red-text">*</p><br/>
-            <p class="text-small margin-up-10">Please check the days that your restaurant will be open. Leave unchecked if restaurant is closed all day.</p>
-        </div>
+        <form>
+            <div class="container-wide mt-1">
+                <label class="font-weight-bold mt-4">Phone</label><p class="red-text">*</p><br/>
+                <input id="phone" type="text" class="input-full margin-up" placeholder="(000) 000-000"/>
+                <label class="font-weight-bold mt-2">Website</label><p class="red-text">*</p><br/>
+                <input id="website" type="text" class="input-full margin-up" placeholder="www.website.com"/>
+                <label class="font-weight-bold mt-2">Hours</label><p class="red-text">*</p><br/>
+                <p class="text-small margin-up-10">Please check the days that your restaurant will be open. Leave unchecked if restaurant is closed all day.</p>
+                <p id="detailErrors" class="pt-2 red-text text-small"></p>
+                <div class="pt-3">
+                    <button type="button" class="next float-right d-inline-block ml-2" onclick="toPage3()">NEXT</button>
+                    <div class="pl-5 pr-5">
+                        <button type="button" class="cancel float-right d-inline-flex pl-2 pr-2">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </body>

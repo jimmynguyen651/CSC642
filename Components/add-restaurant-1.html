@@ -7,6 +7,7 @@
     <title>Add a Restaurant</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="./functional.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -51,11 +52,12 @@
                 <a class="none text-white" href="add-restaurant-4.html"><li>Account</li></a>
               </ul><br>
         </div>
+        <form>
         <div class="container-wide mt-1">
             <label class="font-weight-bold mt-4">Restaurant Name</label><p class="red-text">*</p><br/>
-            <input type="text" class="input-full margin-up"/>
+            <input type="text" id="restaurantName" class="input-full margin-up" required/>
             <label class="font-weight-bold mt-2">Country</label><p class="red-text">*</p><br/>
-            <select id="country" class="input-full margin-up input-wide-x" name="country">
+            <select id="country" class="input-full margin-up input-wide-x" name="country" required>
                 <option>Select Country</option>
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Aland Islands</option>
@@ -311,9 +313,9 @@
                 <option value="ZW">Zimbabwe</option>
             </select>
             <label class="font-weight-bold mt-3">Restaurant Address</label><p class="red-text">*</p><br/>
-            <input type="text" class="input-full margin-up"/>
+            <input id="restaurantAddress" type="text" class="input-full margin-up" required/>
             <label class="font-weight-bold mt-3">Zip Code</label><p class="red-text">*</p><br/>
-            <input type="text" class="input-full margin-up"/>
+            <input id="restaurantZipCode" type="text" class="input-full margin-up"/>
             <label class="font-weight-bold mt-3">State</label><p class="red-text">*</p><br/>
             <select id="state" class="input-full input-wide-x">
                     <option value="AL">Alabama</option>
@@ -368,6 +370,14 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>			
             </select>
+            <p class="pt-2 red-text text-small" id="error"></p>
+            <div class="pt-3">
+                <button type="button" class="next float-right d-inline-block ml-2" onclick="toPage2()">NEXT</button>
+                <div class="pl-5 pr-5">
+                    <button type="button" class="cancel float-right d-inline-flex pl-2 pr-2">CANCEL</button>
+                </div>
+            </div>
         </div>
+        </form>
     </div>
 </body>

@@ -34,3 +34,48 @@ function loginAdmin() {
         location.href = "./adminHomePage.html"
     } 
 }
+
+function toPage2() {
+    let restaurantName = document.getElementById("restaurantName").value;  
+    let country = document.getElementById("country").value;
+    let restaurantAddress = document.getElementById("restaurantAddress").value;
+    let zipCode = document.getElementById("restaurantZipCode").value;
+    let state = document.getElementById("state").value;
+    let error = document.getElementById("error");
+
+    if (restaurantName.length == 0 || country.length == 0 || restaurantAddress.length == 0 || zipCode.length == 0
+        || state.length == 0) {
+            error.innerHTML = "Please fill out every field before continuing.";
+        } else {
+            location.href = "./add-restaurant-2.html"
+        }
+}
+
+function toPage3() {
+    let phone = document.getElementById("phone").value;
+    let website = document.getElementById("website").value;
+    let detailErrors = document.getElementById("detailErrors");
+
+
+    if (phone.length == 0 || website.length == 0) {
+        detailErrors.innerHTML = "Please fill out every field before continuing.";
+    } else {
+        location.href = "./add-restaurant-3.html"
+    }
+}
+
+function toPage4() {
+    let allergyFriendly = document.getElementById("allergyFriendly").value;
+    let disability = document.getElementById("disability").value;
+    let covid = document.getElementById("covid").value;
+    let categories = document.getElementById("categories").value;
+    let filtersError = document.getElementById("filtersError");
+
+
+    if (allergyFriendly.length == 0 || disability.length == 0 || covid.length == 0 || categories.length == 0) {
+        filtersError.innerHTML = "Please fill out every field before continuing.";
+    } else {
+        location.href = "./add-restaurant-4.html"
+    }
+
+}

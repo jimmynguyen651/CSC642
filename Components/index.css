@@ -181,7 +181,8 @@
     margin: 0 auto;
     display: block;
     width: 900px;
-    height: 500px;
+    /* height: 500px; */
+    padding-bottom: 50px;
     border-radius: 5px;
     border-width: 1px;
     border-color: lightgray;
@@ -451,4 +452,24 @@ a
 
 .nav-link:hover{
     color: white !important;
+}
+
+.signup-business {
+    width: 25% !important;
+}
+
+.cancel {
+    border-style: none;
+    border-radius: 5px;
+    background-color:rgb(173, 44, 44);
+    color: white;
+    padding: 3px 3px 3px 3px;
+}
+
+.next {
+    border-style: none;
+    border-radius: 5px;
+    background-color:rgb(21, 156, 39);
+    color: white;
+    padding: 3px 5px 3px 5px;
 }
