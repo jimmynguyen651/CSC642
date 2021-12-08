@@ -32,53 +32,55 @@
 
 </head>
 <body>
-    <div class="topnav">
-        <nav>
-            <ul class="home-list">
-                <li class="nav-item dropdown">
-                    <!--nav-link in the class to show case whole button-->
-                    <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon"/>
-                    </a>
-                    
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+  <div class="newNavBar">
+    <div class="d-flex">
+      <div class="mr-auto p-2" style="margin-bottom: -70px;">
 
-                      <a class="dropdown-item" href="pendingRestaurantListings.html">
-                        Pending Restaurant Submissions
-                      </a>
-                      <a class="dropdown-item" href="allRestaurantListings.html">
-                        View All Restaurant Approvals
-                      </a>
-                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                        Flagged Reviews
-                      </a>
-                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                        User Accounts
-                      </a>
-                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                        Account Settings
-                      </a>
-                      <a class="dropdown-item" href="supportPage.html">
-                        Support
-                      </a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="landing.html">
-                        Log Out
-                      </a>
-                    </div>
-      
-                </li>
+        <ul class="home-list">
+          <li class="nav-item dropdown">
+              <!--nav-link in the class to show case whole button-->
+              <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon"/>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                <li>
-                  <div class="top-nav-logo">
-                    <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo"/></a>
-                  </div>
-                </li>
+                  <a class="dropdown-item" href="pendingRestaurantListings.html">
+                    Pending Restaurant Submissions
+                  </a>
+                  <a class="dropdown-item" href="allRestaurantListings.html">
+                    View All Restaurant Approvals
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    Flagged Reviews
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    User Accounts
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    Account Settings
+                  </a>
+                  <a class="dropdown-item" href="supportPage.html">
+                    Support
+                  </a>
+              </div>
+          </li>
+          <li>
+            <div class="top-nav-logo">
+              <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo"/></a>
+            </div>
+          </li>
+      </ul>
+      </div>
+      <div class="p-2">
+        <ul class="home-list">
+          <a class="btn stylingbutton" href="landing.html">
+            Log Out
+          </a>
+      </ul>
+      </div>
+  </div>
 
-            </ul>
-    
-        </nav>
-    </div>
+  </div>
 
     <div class="bottom-nav">
       <div class="container">

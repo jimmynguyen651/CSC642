@@ -512,6 +512,57 @@ function checkApproveFunction9() {
     }    
 }
 
+var checkDeclinedPressed91 = false;
+var checkApprovedPressed91 = false;
+
+function checkDeclineFunction91() {
+    if(checkDeclinedPressed91 == false){
+        document.getElementById("incomingCOVIDDecline").style.backgroundColor = "rgb(201, 0, 0)";
+        document.getElementById("incomingCOVIDDecline").style.color = "white";
+        document.getElementById("incomingCOVIDApprove").style.backgroundColor = "";
+        document.getElementById("incomingCOVIDApprove").style.color = "gray";
+        document.getElementById("finalApproveButton").disabled = true;
+        document.getElementById("finalDeclineButton").disabled = false;
+    
+        if(trueCount == 1){
+            falseCount +=1;
+        }else{
+            falseCount +=1;
+            trueCount -=1;  
+        }
+        checkDeclinedPressed91 = true;
+        checkApprovedPressed91 = false;
+        return true;
+    }
+}
+
+function checkApproveFunction91() {
+    if(checkApprovedPressed91 == false){
+        document.getElementById("incomingCOVIDApprove").style.backgroundColor = "green";
+        document.getElementById("incomingCOVIDApprove").style.color = "white";
+        document.getElementById("incomingCOVIDDecline").style.backgroundColor = "";
+        document.getElementById("incomingCOVIDDecline").style.color = "gray"
+        
+        if(falseCount == 1){
+            trueCount +=1;
+        }else{
+            trueCount +=1;  
+            falseCount -=1;
+        }
+
+        checkDeclinedPressed91 = false;
+        checkApprovedPressed91 = true;
+        if(falseCount<2 && checkApprovedPressed91 == true){
+            document.getElementById("finalApproveButton").disabled = false;
+            document.getElementById("finalDeclineButton").disabled = false;
+        }else if(falseCount>1){
+            document.getElementById("finalApproveButton").disabled = true;
+        }
+        
+        return true;
+    }    
+}
+
 
 var checkDeclinedPressed10 = false;
 var checkApprovedPressed10 = false;
@@ -619,18 +670,20 @@ function check(){
     if(falseCount == 1 && checkApprovedPressed == true && checkApprovedPressed1 == true && checkApprovedPressed2 == true 
         && checkApprovedPressed3 == true && checkApprovedPressed4 == true && checkApprovedPressed5 == true 
         && checkApprovedPressed6 == true && checkApprovedPressed7 == true && checkApprovedPressed8 == true
-        && checkApprovedPressed9 == true && checkApprovedPressed10 == true && checkApprovedPressed11 == true){
+        && checkApprovedPressed9 == true && checkApprovedPressed91 && checkApprovedPressed10 == true 
+        && checkApprovedPressed11 == true){
             document.getElementById("finalDeclineButton").disabled = true;
             document.getElementById("finalApproveButton").disabled = false;
         }
     else if(checkDeclinedPressed == true || checkDeclinedPressed1 == true || checkDeclinedPressed2 == true 
         || checkDeclinedPressed3 == true || checkDeclinedPressed4 == true || checkDeclinedPressed5 == true 
         || checkDeclinedPressed6 == true || checkDeclinedPressed7 == true || checkDeclinedPressed8 == true
-        || checkDeclinedPressed9 == true || checkDeclinedPressed10 == true || checkDeclinedPressed11 == true){
+        || checkDeclinedPressed9 == true || checkDeclinedPressed91 == true || checkDeclinedPressed10 == true
+        || checkDeclinedPressed11 == true){
         document.getElementById("finalDeclineButton").disabled = false;
         document.getElementById("finalApproveButton").disabled = true;
 
-    }else if(falseCount==1 || trueCount==1 || trueCount<13){
+    }else if(falseCount==1 || trueCount==1 || trueCount<14){
         document.getElementById("finalDeclineButton").disabled = true;
         document.getElementById("finalApproveButton").disabled = true;
         alert("Please finish reviewing the restaurant before continuing!")

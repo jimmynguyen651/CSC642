@@ -27,99 +27,98 @@
 </head>
 
 <body>
-    <div class="topnav">
-        <nav>
+    <div class="newNavBar">
+        <div class="d-flex">
+          <div class="mr-auto p-2" style="margin-bottom: -70px;">
+    
             <ul class="home-list">
-                <li class="nav-item dropdown">
-                    <!--nav-link in the class to show case whole button-->
-                    <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon" />
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                        <a class="dropdown-item" href="pendingRestaurantListings.html">
-                            Pending Restaurant Submissions
-                          </a>
-                          <a class="dropdown-item" href="allRestaurantListings.html">
-                            View All Restaurant Approvals
-                          </a>
-                          <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                            Flagged Reviews
-                          </a>
-                          <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                            User Accounts
-                          </a>
-                          <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                            Account Settings
-                          </a>
-                          <a class="dropdown-item" href="supportPage.html">
-                            Support
-                          </a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="landing.html">
-                            Log Out
-                          </a>
-                    </div>
-
-                </li>
-
-                <li>
-                    <div class="top-nav-logo">
-                        <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo" /></a>
-                    </div>
-                </li>
-
-            </ul>
-
-        </nav>
-    </div>
+              <li class="nav-item dropdown">
+                  <!--nav-link in the class to show case whole button-->
+                  <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon"/>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    
+                      <a class="dropdown-item" href="pendingRestaurantListings.html">
+                        Pending Restaurant Submissions
+                      </a>
+                      <a class="dropdown-item" href="allRestaurantListings.html">
+                        View All Restaurant Approvals
+                      </a>
+                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                        Flagged Reviews
+                      </a>
+                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                        User Accounts
+                      </a>
+                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                        Account Settings
+                      </a>
+                      <a class="dropdown-item" href="supportPage.html">
+                        Support
+                      </a>
+                  </div>
+              </li>
+              <li>
+                <div class="top-nav-logo">
+                  <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo"/></a>
+                </div>
+              </li>
+          </ul>
+          </div>
+          <div class="p-2">
+            <ul class="home-list">
+              <a class="btn stylingbutton" href="landing.html">
+                Log Out
+              </a>
+          </ul>
+          </div>
+      </div>
+    
+      </div>
 
     <div class="container">
 
-        <h1 style="text-align: center;">List of All Approved Restuarants</h1>
+        <h1 style="text-align: center;">List of All Approved Restaurants</h1>
 
         <!-- Search form -->
-        <div class="d-flex" style="margin-top: 7%; margin-bottom: -2%;">
-            <div class="mr-auto p-2">
-                <form id="form_search" name="form_search" method="get" action="" class="form-inline">
-                    <div class="form-group">
-                        <div class="input-group">
-
-                            <span><h3 class="mx-2">Search:</h3></span>
-
-                            <input class="form-control" type="text" placeholder="Enter Restaurant/Locations" aria-label="Search" onkeyup="checkForRestaurant()" id="searchRestaurant">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="p-2">
-                <p style="font-weight: bold;" class="numberResults">1-6 of 18 results</p>
-            </div>
-
-            <div class="p-2">
-                <span>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link noActionHover" baria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-                </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="allRestaurantListings.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="allResaurtantListings2.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="allResaurtantListings3.html">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="allResaurtantListings2.html" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-                </ul>
-                </span>
-            </div>
-        </div>
+        <div style="margin-top: 5%; margin-bottom: -2%;">
+            <nav class="navbar">
+              <div class="d-flex mr-auto">
+                <span><h3 class="mx-2">Search:</h3></span>
+                <input class="form-control" type="text" placeholder="Enter Restaurant/Locations" aria-label="Search" onkeyup="checkForRestaurant()" id="searchRestaurant">
+              </div>
+              <div class="d-flex" style="margin-top: 10px;">
+                <div class="p-2">
+                  <p style="font-weight: bold; margin-top: 6px;">1-6 out of 18 results</p>
+                </div>
+                  <div class=" p-2">
+                    <span>
+  
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                              <a class="page-link noActionHover" baria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                                </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="allRestaurantListings.html">1</a></li>
+                                <li class="page-item"><a class="page-link" href="allResaurtantListings2.html">2</a></li>
+                                <li class="page-item"><a class="page-link" href="allResaurtantListings3.html">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="allResaurtantListings2.html" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                                </ul>
+                    </nav>
+                    </span>
+                  </div>  
+              </div>
+            </nav>
+          </div>
 
         <div id="searchThruCards">
             <div class="card">

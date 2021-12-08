@@ -30,83 +30,78 @@
 </head>
 
 <body>
-    <div class="topnav">
-        <nav>
-            <ul class="home-list">
-                <li class="nav-item dropdown">
-                    <!--nav-link in the class to show case whole button-->
-                    <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon" />
-                    </a>
+      <div class="newNavBar"> 
+    <div class="d-flex">
+      <div class="mr-auto p-2" style="margin-bottom: -70px;">
 
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <ul class="home-list">
+          <li class="nav-item dropdown">
+              <!--nav-link in the class to show case whole button-->
+              <a href="#" class="topnav-a nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="topnav-img-burger-icon" src="adminimgs/burgericon.jpg" alt="burgericon"/>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                      <a class="dropdown-item" href="pendingRestaurantListings.html">
-                        Pending Restaurant Submissions
-                      </a>
-                      <a class="dropdown-item" href="allRestaurantListings.html">
-                        View All Restaurant Approvals
-                      </a>
-                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                        Flagged Reviews
-                      </a>
-                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                        User Accounts
-                      </a>
-                      <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
-                        Account Settings
-                      </a>
-                      <a class="dropdown-item" href="supportPage.html">
-                        Support
-                      </a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="landing.html">
-                        Log Out
-                      </a>
-                    </div>
+                  <a class="dropdown-item" href="pendingRestaurantListings.html">
+                    Pending Restaurant Submissions
+                  </a>
+                  <a class="dropdown-item" href="allRestaurantListings.html">
+                    View All Restaurant Approvals
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    Flagged Reviews
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    User Accounts
+                  </a>
+                  <a class="dropdown-item" onclick="notWorkingYet()" style="cursor: pointer;">
+                    Account Settings
+                  </a>
+                  <a class="dropdown-item" href="supportPage.html">
+                    Support
+                  </a>
+              </div>
+          </li>
+          <li>
+            <div class="top-nav-logo">
+              <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo"/></a>
+            </div>
+          </li>
+      </ul>
+      </div>
+      <div class="p-2">
+        <ul class="home-list">
+          <a class="btn stylingbutton" href="landing.html">
+            Log Out
+          </a>
+      </ul>
+      </div>
+  </div>
 
-                </li>
-
-                <li>
-                    <div class="top-nav-logo">
-                        <a href="adminHomePage.html" class="topnav-a"><img class="topnav-img-logo" src="adminimgs/Tidbits-Logo.png" alt="logo" /></a>
-                    </div>
-                </li>
-
-            </ul>
-
-        </nav>
-    </div>
+  </div>
 
     <div class="bottomnav container">
-        <h1 style="text-align: center;">Pending Restuarants</h1>
-
-        <div class="d-flex" style="margin-top: 7%; margin-bottom: 2%;">
-            <div class="mr-auto p-2">
-                <form id="form_search" name="form_search" method="get" action="" class="form-inline">
-                    <div class="form-group">
-                        <div class="input-group">
-
-                            <span><h3 class="mx-2">Search:</h3></span>
-
-                            <input class="form-control" type="text" placeholder="Enter Restaurant/Locations" aria-label="Search" onkeyup="checkForRestaurant()" id="searchRestaurant">
-                        </div>
-                    </div>
-                </form>
+        <h1 style="text-align: center;">Pending Restaurants</h1>
+        <div>
+          <nav class="navbar" style="margin-top: 5%; margin-bottom: 1%;">
+            <div class="d-flex mr-auto">
+              <span><h3 class="mx-2">Search:</h3></span>
+              <input class="form-control" type="text" placeholder="Enter Restaurant/Locations" aria-label="Search" onkeyup="checkForRestaurant()" id="searchRestaurant">
             </div>
-            <div class="p-2">
-                <p style="font-weight: bold;">6-7 out of 7 results</p>
-            </div>
+            <div class="d-flex" style="margin-top: 10px;">
+              <div class="p-2">
+                <p style="font-weight: bold; margin-top: 6px;">6-7 out of 7 results</p>
+              </div>
+                <div class=" p-2">
+                  <span>
 
-            <div class="p-2">
-                <span>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="pendingRestaurantListings.html" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                    </a>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="pendingRestaurantListings.html" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                          </a>
                       </li>
                       <li class="page-item"><a class="page-link" href="pendingRestaurantListings.html">1</a></li>
                       <li class="page-item active"><a class="page-link" href="pendingRestaurantListings2.html">2</a></li>
@@ -116,10 +111,20 @@
                               <span class="sr-only">Next</span>
                           </a>
                       </li>
-            </ul>
-                </span>
+                    </ul>
+                  </nav>
+                  </span>
+                </div>  
             </div>
+          </nav>
         </div>
+
+
+
+
+
+
+
 
         <div id="searchThruCards">
           <div class="card">
@@ -133,11 +138,11 @@
           </div>
           <div class="card">
             <div class="card-body text-center">
-                <h5 class="card-title">Unlisted</h5>
-                <p class="card-text location"> City, State</p>
+                <h5 class="card-title">Jim Bob's Grill and Chill</h5>
+                <p class="card-text location"> Los Angeles, California</p>
                 <a class="badge badge-primary" style="margin-bottom: 1%; cursor: pointer;" data-toggle="modal" data-target="#openNotesModal">Notes</a>
                 <p class="card-text">Submitted couple minutes ago</p>
-                <a href="templateReviewRestaurant.html" class="btn btn-primary">Review Information</a>
+                <a href="templateReviewRestaurant3.html" class="btn btn-primary">Review Information</a>
             </div>
         </div>
         </div>
