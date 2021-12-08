@@ -1,12 +1,62 @@
 function addReview() {
-    console.log("clicked");
     let review = document.getElementById("start-review").value;
+
+    let oneStar = document.getElementById("star1").checked;
+    let twoStar = document.getElementById("star2").checked;
+    let threeStar = document.getElementById("star3").checked;
+    let fourStar = document.getElementById("star4").checked;
+    let fiveStar = document.getElementById("star5").checked;
 
     let dt = new Date();
 
     var numeric = {month: 'numeric', day: 'numeric', year: 'numeric' };
 
-    if (review.length > 0) {
+    if (review.length > 0 && oneStar) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review +`</p>
+    </div>`
+    } else if (review.length > 0 && twoStar) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review +`</p>
+    </div>`
+    } else if (review.length > 0 && threeStar) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review +`</p>
+    </div>`
+    } else if (review.length > 0 && fourStar) {
         document.getElementById("added-review").innerHTML +=
         `<div class="review-box-user">
         <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
@@ -18,6 +68,21 @@ function addReview() {
             <span class="fa fa-star white-star checked-yellow"></span>
             <span class="fa fa-star white-star checked-yellow"></span>
             <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review +`</p>
+    </div>`
+    } else if (review.length > 0 && fiveStar) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span><br/>
         </div>
         <p class="ml-4 mr-4 pt-2"> ` + review +`</p>
     </div>`
