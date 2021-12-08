@@ -3,16 +3,15 @@ function addReview() {
     let review = document.getElementById("start-review").value;
 
     let dt = new Date();
-    document.getElementById('time').innerHTML=dt.toLocaleDateString();;
 
-    var numeric = { day: 'numeric', month: 'numeric', year: 'numeric' };
+    var numeric = {month: 'numeric', day: 'numeric', year: 'numeric' };
 
     if (review.length > 0) {
         document.getElementById("added-review").innerHTML +=
         `<div class="review-box-user">
         <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
         <p class="d-inline-block font-weight-bold">You</p>
-        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-GB', numeric) + `</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
         <div class="margin-up pl-4 pt-2">
             <span class="fa fa-star white-star checked-yellow"></span>
             <span class="fa fa-star white-star checked-yellow"></span>
