@@ -54,10 +54,11 @@ function toPage2() {
 function toPage3() {
     let phone = document.getElementById("phone").value;
     let website = document.getElementById("website").value;
+    let restaurantPhoto = document.getElementById("restaurantPhoto").value;
     let detailErrors = document.getElementById("detailErrors");
 
 
-    if (phone.length == 0 || website.length == 0) {
+    if (phone.length == 0 || website.length == 0 || restaurantPhotoPhoto.length == 0) {
         detailErrors.innerHTML = "Please fill out every field before continuing.";
     } else {
         location.href = "./add-restaurant-3.html"
@@ -65,17 +66,48 @@ function toPage3() {
 }
 
 function toPage4() {
-    let allergyFriendly = document.getElementById("allergyFriendly").value;
-    let disability = document.getElementById("disability").value;
-    let covid = document.getElementById("covid").value;
+    let yesAllergy = document.getElementById("allergyFriendlyYes").checked;
+    let noAllergy = document.getElementById("allergyFriendlyNo").checked;
+    let yesDisability = document.getElementById("disabilityYes").checked;
+    let noDisability = document.getElementById("disabilityNo").checked;
+    let yesCovid = document.getElementById("covidYes").checked;
+    let noCovid = document.getElementById("covidNo").checked;
     let categories = document.getElementById("categories").value;
     let filtersError = document.getElementById("filtersError");
 
-
-    if (allergyFriendly.length == 0 || disability.length == 0 || covid.length == 0 || categories.length == 0) {
-        filtersError.innerHTML = "Please fill out every field before continuing.";
+    if ((yesAllergy || noAllergy) && (yesDisability || noDisability) && (yesCovid || noCovid) && categories.length !== 0) {
+        location.href="./add-restaurant-4.html"
     } else {
-        location.href = "./add-restaurant-4.html"
+        filtersError.innerHTML = "Please fill out every field before continuing.";
     }
 
+
+}
+
+function addRestSignupComplete() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let termsConditions = document.getElementById("termsConditions").checked;
+    let signupError = document.getElementById("signupError");
+
+    if (firstName.length == 0 || lastName.length == 0 || email.length == 0 || password.length == 0 || confirmPassword.length == 0 || !termsConditions) {
+        signupError.innerHTML = "Please fill out every field before continuing.";
+    } else {
+        location.href = "./add-restaurant-complete.html";
+    }
+}
+
+function addRestLoginComplete() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let loginError = document.getElementById("loginError");
+
+    if (email.length == 0 || password.length == 0) {
+        loginError.innerHTML = "Please fill out every field before continuing.";
+    } else {
+        location.href = "./add-restaurant-complete.html";
+    }
 }

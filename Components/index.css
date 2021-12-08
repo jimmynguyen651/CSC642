@@ -477,3 +477,14 @@ a
 .circleCheck {
     border-radius: 100% !important;
 }
+
+.input-width-2 {
+    width: 80% !important;
+    margin-left: 2px;
+    height: 30px !important;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 2px;
+    text-indent: 5px;
+    margin-bottom: 2px !important;
+}

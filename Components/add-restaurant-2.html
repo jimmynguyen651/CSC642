@@ -60,8 +60,111 @@
                 <input id="website" type="text" class="input-full margin-up" placeholder="www.website.com"/>
                 <label class="font-weight-bold mt-2">Hours</label><p class="red-text">*</p><br/>
                 <p class="text-small margin-up-10">Please check the days that your restaurant will be open. Leave unchecked if restaurant is closed all day.</p>
-                <p id="detailErrors" class="pt-2 red-text text-small"></p>
-                <input type="checkbox" class="circleCheck" />
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <input type="radio"/>
+                        <select id="day1" class="input-width-2">
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                        <br/>
+                        <input type="radio"/>
+                        <select id="day2" class="input-width-2 mt-3">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                        <br/>
+                        <input type="radio"/>
+                        <select id="day3" class="input-width-2 mt-3">
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                        </select>
+                        <br/>
+                        <input type="radio"/>
+                        <select id="day4" class="input-width-2 mt-3">
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                        </select>
+                        <br/>
+                        <input type="radio"/>
+                        <select id="day5" class="input-width-2 mt-3">
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                        </select>
+                        <br/>
+                        <input type="radio"/>
+                        <select id="day6" class="input-width-2 mt-3">
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                        </select>
+                        <br/>
+                        <input type="radio"/>
+                        <select id="day7" class="input-width-2 mt-3">
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                      </div>
+                      <div class="col-sm">
+                        <label class="font-weight-bold pl-3 pr-1 margin-up">Open</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Open</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Open</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Open</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Open</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Open</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Open</label><input type="time"/><br/>
+                      </div>
+                      <div class="col-sm">
+                        <label class="font-weight-bold pl-3 pr-1 margin-up">Close</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Close</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Close</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Close</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Close</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Close</label><input type="time"/><br/>
+                        <label class="font-weight-bold pl-3 pr-1 mt-3">Close</label><input type="time"/><br/>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                <label class="font-weight-bold">Restaurant Photo</label><p class="red-text">*</p><br/>
+                <input id="restaurantPhoto" type="file" required/><br/>
+                <p id="detailErrors" class="mt-3 red-text text-small"></p> 
+                
                 <div class="pt-3">
                     <button type="button" class="next float-right d-inline-block ml-2" onclick="toPage3()">NEXT</button>
                     <div class="pl-5 pr-5">
