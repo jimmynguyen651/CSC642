@@ -296,6 +296,12 @@ a
     border-radius: 2px;
 }
 
+
+.checked-yellow {
+    background-color: #F5BD1F !important;
+    padding: 5px 5px 5px 5px !important;
+    border-radius: 2px;
+}
 .unchecked-grey {
     background-color: #E8E8E8 !important;
     padding: 5px 5px 5px 5px !important;
