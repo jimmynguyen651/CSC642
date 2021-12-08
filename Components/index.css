@@ -471,5 +471,9 @@ a
     border-radius: 5px;
     background-color:rgb(21, 156, 39);
     color: white;
-    padding: 3px 5px 3px 5px;
+    padding: 3px 7px 3px 7px;
+}
+
+.circleCheck {
+    border-radius: 100% !important;
 }
