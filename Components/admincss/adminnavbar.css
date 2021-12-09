@@ -4,23 +4,21 @@ body{
 }
 
 /*to do with navbar*/
-.topnav{
+.newNavBar{
     background-color:#F5BD1F;
-    height: 68px;
     width: 100%;
-    
+    height: 80px;
 }
 
 /*to do with hamburger icon*/
 .topnav-img-burger-icon{
-    max-height: 90px;
     max-width: 70px;
     margin-left: -50px;
 }
 
-
 .dropdown-menu{
     margin-left: -40px;
+    margin-top: 5px;
 }
 
 /*to do with logo*/
@@ -30,4 +28,87 @@ body{
 
 .home-list li{
     display: inline-block;
+}
+
+.stylingbutton{
+    margin-top: 8px;
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    border-color: black;
+    border: solid 2px;
+    color: black;
+}
+
+.stylingbutton:hover{
+    background-color: black;
+    color: #F5BD1F;
+}
+
+@media (max-width: 451px) {
+    .topnav-img-logo{
+        max-width: 100px !important;
+    }
+    .topnav-img-burger-icon{
+        max-width: 50px !important;
+    }
+    .stylingbutton{
+        margin-top: 5px !important;
+        font-weight: 500 !important;
+        font-size: 15px !important;
+    }
+    .dropdown-menu{
+        margin-top: 10px!important;
+    }
+    .newNavBar{
+        height: 70px !important;
+    }
+}
+
+@media (max-width: 361px) {
+    .topnav-img-logo{
+        max-width: 78px !important;
+    }
+    .topnav-img-burger-icon{
+        max-width: 40px !important;
+    }
+    .stylingbutton{
+        margin-top: 5px !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+    }
+    .dropdown-menu{
+        margin-top: 8px!important;
+    }
+    .newNavBar{
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 339px) {
+    .topnav-img-logo{
+        max-width: 78px !important;
+    }
+    .topnav-img-burger-icon{
+        max-width: 30px !important;
+    }
+    .stylingbutton{
+        margin-top: 5px !important;
+        font-weight: 600 !important;
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .topnav-img-logo{
+        max-width: 78px !important;
+    }
+    .topnav-img-burger-icon{
+        max-width: 30px !important;
+    }
+    .stylingbutton{
+        margin-top: 5px !important;
+        font-weight: 600 !important;
+        font-size: 8px !important;
+    }
 }
