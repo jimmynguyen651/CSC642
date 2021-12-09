@@ -89,6 +89,128 @@ function addReview() {
     }
 }
 
+function addReview2() {
+    let firstPageReview = document.getElementById("first-page-review");
+
+    let review_pop = document.getElementById("start-review2").value;
+
+    let oneStar_pop = document.getElementById("star1_pop").checked;
+    let twoStar_pop = document.getElementById("star2_pop").checked;
+    let threeStar_pop = document.getElementById("star3_pop").checked;
+    let fourStar_pop = document.getElementById("star4_pop").checked;
+    let fiveStar_pop = document.getElementById("star5_pop").checked;
+
+    let dt = new Date();
+
+    var numeric = {month: 'numeric', day: 'numeric', year: 'numeric' };
+
+    if (review_pop.length > 0 && (oneStar_pop || twoStar_pop || threeStar_pop || fourStar_pop || fiveStar_pop)) {
+        firstPageReview.innerHTML =
+        `<div id="done">
+            <h3 class="pt-2 pl-2 font-weight-bold text-center">Log in to post your review</h3>
+            <div class="pt-2 pl-3">
+                <label class="font-weight-bold d-inline-block">Email</label><p class="red-text">*</p><br/>
+                <div class="mr-3">
+                    <input id="email_pop" type="email" placeholder="Email" class="input-full margin-m-up"/>
+                </div>
+                <label class="font-weight-bold pt-2 d-inline-block">Password</label><p class="red-text">*</p><br/>
+                <div class="mr-3">
+                    <input id="password_pop" type="password" placeholder="Password" class="input-full margin-m-up"/>
+                </div>
+            </div>
+            <input id="posted" type="button" value="Login and post" class="search-button-3"/>
+        </div>`;
+    }
+
+    let posted = document.getElementById("posted");
+
+
+
+
+    posted.onclick = function () {
+        document.getElementById("done").innerHTML =
+        `<h2 class="font-weight-bold text-center pt-4 pl-2 pr-2">Thank you for sharing your experience with us!</h2>
+        <p class="text-center">You can now close this pop up.</p>`;
+    }
+
+    if (review_pop.length > 0 && oneStar_pop) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review_pop +`</p>
+    </div>`
+    } else if (review_pop.length > 0 && twoStar_pop) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review_pop +`</p>
+    </div>`
+    } else if (review_pop.length > 0 && threeStar_pop) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review_pop +`</p>
+    </div>`
+    } else if (review_pop.length > 0 && fourStar_pop) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review_pop +`</p>
+    </div>`
+    } else if (review_pop.length > 0 && fiveStar_pop) {
+        document.getElementById("added-review").innerHTML +=
+        `<div class="review-box-user">
+        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+        <p class="d-inline-block font-weight-bold">You</p>
+        <p class="d-inline-block text-small"> • ` + dt.toLocaleDateString('en-US', numeric) + `</p>
+        <div class="margin-up pl-4 pt-2">
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span>
+            <span class="fa fa-star white-star checked-yellow"></span><br/>
+        </div>
+        <p class="ml-4 mr-4 pt-2"> ` + review_pop +`</p>
+    </div>`
+    }
+}
+
 function loginAdmin() {
     // e.preventDefault();
     let login = document.getElementById("login").value;
