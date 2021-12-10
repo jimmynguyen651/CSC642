@@ -107,7 +107,9 @@ function addReview2() {
     if (review_pop.length > 0 && (oneStar_pop || twoStar_pop || threeStar_pop || fourStar_pop || fiveStar_pop)) {
         firstPageReview.innerHTML =
         `<div id="done">
+            <div id="redirectToSignup">
             <h3 class="pt-2 pl-2 font-weight-bold text-center">Log in to post your review</h3>
+            <p class="text-center">New here? <a id="signup_redirect" href="#">Sign up!</a></p>
             <div class="pt-2 pl-3">
                 <label class="font-weight-bold d-inline-block">Email</label><p class="red-text">*</p><br/>
                 <div class="mr-3">
@@ -119,10 +121,13 @@ function addReview2() {
                 </div>
             </div>
             <input id="posted" type="button" value="Login and post" class="search-button-3"/>
+            </div>
         </div>`;
     }
 
     let posted = document.getElementById("posted");
+
+    let signup_redirector = document.getElementById("signup_redirect");
 
 
 
