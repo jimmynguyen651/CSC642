@@ -249,7 +249,7 @@ function toPage3() {
     let detailErrors = document.getElementById("detailErrors");
 
 
-    if (phone.length == 0 || website.length == 0 || restaurantPhoto.length == 0) {
+    if (phone.length == 0 || website.length == 0) {
         detailErrors.innerHTML = "Please fill out every field before continuing.";
     } else {
         location.href = "./add-restaurant-3.html"
