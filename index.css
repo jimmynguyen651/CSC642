@@ -17,6 +17,19 @@
     margin-top: 0 !important;
 }
 
+.restaurant-image {
+    background-image: url(blackangus2.png);
+    /* background-repeat: no-repeat; */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 350px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin-top: 0 !important;
+    border-radius: 15px !important;
+    /* opacity: 0.1; */
+}
+
 .input-width {
     width: 45% !important;
     margin-left: 2px;

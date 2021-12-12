@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jim Bob's Grill and Chill</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="review-popup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"><body> -->
+    <script type="text/javascript" src="./functional.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</head>
+    <!-- <div>
+        <nav>
+            <div class="topnav">
+                <div class="topnav-left">
+                  <a href="./index.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a>
+                  <div class="pt-1"> 
+                    <a><input class="text-small" placeholder="Find"></a>
+                    <a class="search-bar-top search-bar-width"><input class="text-small" placeholder="Location"></a>
+                    <a class="search-bar-top"><button type="submit" class="text-small"><i class="fa fa-search" aria-hidden="true"></i></button></a>
+                  </div>
+                </div>
+                <div class="topnav-right">
+                  <a class="topnav-items" href="./write-review-search.html">Write a Review</a>
+                  <a class="topnav-items" href="./owner-signup.html">Add a Restaurant</a>
+                  <a class="topnav-items" href="./signup.html">Signup</a>
+                  <a class="topnav-items" href="./login.html">Login</a>
+                  <a></a>
+              </div>
+        </nav>
+    </div> -->
+    <div>
+        <nav class=" nav navbar navbar-expand-lg navbar-light" style="background-color: #F5BD1F;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left: 2%;">
+                <li class="nav-item">
+                    <a href="./index.html" class="topnav-bold"><img class="topnav-logo" src="Tidbits-Logo.png" alt="logo"/></a>
+                </li>
+                <li class="nav-item">
+                    <div class="pt-1 pl-4"> 
+                        <a><input class="text-small" placeholder="Find"></a>
+                        <a class="search-bar-top search-bar-width pl-4"><input class="text-small" placeholder="Location"></a>
+                        <a class="search-bar-top"><button type="submit" class="text-small"><i class="fa fa-search" aria-hidden="true"></i></button></a>
+                      </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-right" style="margin-left: 2%; margin-right: 2%;">
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./write-review-search.html">Write a Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./owner-signup.html">Add a Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mr-2" href="./signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a id="loginRestaurant" class="nav-link active mr-2" href="./login.html">Login</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="banner-hero mt-3">
+        <div class="restaurant-image">
+        <div class="pl-3">
+            <h1 class="font-weight-bold ph-top mb-auto">Jim Bob's Grill and Chill</h1>
+            <div class="square-star checked"><span class="fa fa-star star-align fa-2x white-star"></span></div>
+            <div class="square-star checked"><span class="fa fa-star star-align fa-2x white-star"></span></div>
+            <div class="square-star checked"><span class="fa fa-star star-align fa-2x white-star"></span></div>
+            <div class="square-star unchecked"><span class="fa fa-star star-align fa-2x white-star"></span></div>
+            <div class="square-star unchecked"><span class="fa fa-star star-align fa-2x white-star"></span></div>
+            <p class="font-italic d-inline-block align-center">100 reviews</p>
+            <!-- <p class="margin-l-up"><i class="fa fa-check text-small" aria-hidden="true"></i>American</p> -->
+            <div class="margin-m-up">
+                <span class="tag text-small margin-up-10">American</span>
+                <p class="fa fa-check pl-3 d-inline-block" aria-hidden="true"></p>
+                <p class="d-inline-block text-small">Allergy Friendly</p>
+                <p class="fa fa-check pl-3 d-inline-block" aria-hidden="true"></p>
+                <p class="d-inline-block text-small">Proof of vaccination required</p>
+            </div>
+            <p class="margin-m-up font-weight-bold">Open 11:30 AM - 9:00 PM</p>
+        </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close ml-auto">&times;</span>
+          <div id="first-page-review">
+            <h2 class="font-weight-bold">Restaurant Review</h2>
+            <div class="pt-2 review-box1">
+                <p class="pl-4 pt-2 d-inline-block">How would you rate your experience?</p><p class="red-text">*</p><br/>
+                <div class="pl-4 margin-up-20">
+                    <div class="rate_pop">
+                        <input type="radio" id="star5_pop" name="rate" value="5" />
+                        <label for="star5_pop" title="text">5 stars</label>
+                        <input type="radio" id="star4_pop" name="rate" value="4" />
+                        <label for="star4_pop" title="text">4 stars</label>
+                        <input type="radio" id="star3_pop" name="rate" value="3" />
+                        <label for="star3_pop" title="text">3 stars</label>
+                        <input type="radio" id="star2_pop" name="rate" value="2" />
+                        <label for="star2_pop" title="text">2 stars</label>
+                        <input type="radio" id="star1_pop" name="rate" value="1" />
+                        <label for="star1_pop" title="text">1 star</label><br/>
+                    </div>
+                    <br/>
+                </div>
+                <br/>
+                <p class="pl-4 pt-2 d-inline-block">Share your thoughts with us! Please keep in mind our <a href="#" class="none">guidelines</a>.</p><p class="red-text">*</p><br/>
+                <div class="pl-4">
+                    <textarea id="start-review2"class="select-full text-small" placeholder="Start your review here..."></textarea>
+                </div>
+                <div class="d-flex pr-3 pl-1 pb-2">
+                    <button class="post-review ml-auto text-center" onclick="addReview2()">Post Review</button>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      
+    </div>
+    <div class="row no-gutters pl-4 mt-2">
+        <!-- first column -->
+        <div class="col-12 col-sm-6 col-md-8">
+            <div class="pl-1 pt-3">
+                <button id="myBtn" class="mt-2 pr-2 review-button d-inline-block font-weight-bold"><p class="fa fa-star pt-2"></p> Write a Review</button>
+                <a href="waitlist.html"><button class="mt-2 ml-1 waitlist-button"><p class="fa fa-list-ol pt-2"></p> Get on Waitlist</button></a>
+                <h4 class="mt-3 pl-1 font-weight-bold">Phone Number, Location, Hours</h4>
+                <div class="plh-box">
+                    <div class="row">
+                        <div class="col pt-3">
+                            <div class="pl-5">
+                                <p class="fa fa-phone fa-1x d-inline-block"></p>
+                                <p class="d-inline-block"><ins>(415) 123-4567</ins></p><br/>
+                                <p class="fa fa-external-link fa-1x d-inline-block"></p>
+                                <p class="d-inline-block"><a href="">www.jimbobs.com</a></p><br/>
+                                <p>123 Jim Bob Ave <br/> Los Angeles, CA 12345</p>
+                                <button class="copy-address">Copy Address</button>
+                            </div>
+                        </div>
+                        <div class="col pt-2 pl-5">
+                            <p class="font-weight-bold">Sun 10:00 AM - 10:00 PM</p>
+                            <p class="font-weight-bold margin-ml-up">Sun      10:00 AM - 10:00 PM</p>
+                            <p class="font-weight-bold margin-ml-up">Sun 10:00 AM - 10:00 PM</p>
+                            <p class="font-weight-bold margin-ml-up">Sun 10:00 AM - 10:00 PM</p>
+                            <p class="font-weight-bold margin-ml-up">Sun 10:00 AM - 10:00 PM</p>
+                            <p class="font-weight-bold margin-ml-up">Sun 10:00 AM - 10:00 PM</p>
+                            <p class="font-weight-bold margin-ml-up">Sun 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="pl-1 font-weight-bold pt-5">Reviews</h4>
+                <div class="review-box">
+                    <p id="create-review" class="pl-4 pt-2 font-weight-bold">Create a new review</p>
+                    <p class="pl-4 margin-ml-up text-small">How would you rate your experience?</p>
+                    <div class="margin-up pl-2">
+                        <!-- <span class="fa fa-star white-star unchecked-grey"></span>
+                        <span class="fa fa-star white-star unchecked-grey"></span>
+                        <span class="fa fa-star white-star unchecked-grey"></span>
+                        <span class="fa fa-star white-star unchecked-grey"></span>
+                        <span class="fa fa-star white-star unchecked-grey"></span><br/> -->
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
+                        <div class="pt-3 pl-3">
+                            <textarea id="start-review"class="select-full text-small" placeholder="Start your review here..."></textarea>
+                        </div>
+                        <div class="d-flex pr-3 pt-1 pb-2">
+                            <button class="post-review ml-auto text-center" onclick="addReview()">Post Review</button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="background-grey mt-4"/>
+                 <!-- insert new review here -->
+                 <div class="pt-4">
+                    <div id="added-review">
+                       
+                    </div>
+                </div>
+
+                <!--rest of reviews -->
+                <div class="pt-4">
+                    <div class="review-box-user">
+                        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+                        <p class="d-inline-block font-weight-bold">Joe Joberson</p>
+                        <p class="d-inline-block text-small"> • 12/01/2021</p>
+                        <div class="margin-up pl-4 pt-2">
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star unchecked-grey"></span><br/>
+                        </div>
+                        <p class="ml-4 mr-4 pt-2">I highly recommend going here early! Lines do grow really fast. I also really recommend the calamari and the salad.</p>
+                    </div>
+                </div>
+                
+        
+                <div class="pt-4">
+                    <div class="review-box-user">
+                        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+                        <p class="d-inline-block font-weight-bold">Jane Anthony</p>
+                        <p class="d-inline-block text-small"> • 07/29/2021</p>
+                        <div class="margin-up pl-4 pt-2">
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                            <span class="fa fa-star white-star checked-yellow"></span><br/>
+                        </div>
+                        <p class="ml-4 mr-4 pt-2">I love the atmosphere here! Everyone is super welcoming and nice, and service was amazing. I was immediately seated at 12 PM and it was quite busy. The food was amazing.</p>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <div class="review-box-user">
+                        <p class="pl-4 pt-3 fa fa-user fa-2x d-inline-block"></p>
+                        <p class="d-inline-block font-weight-bold">Alicia Anderson</p>
+                        <p class="d-inline-block text-small"> • 05/21/2021</p>
+                        <div class="margin-up pl-4 pt-2">
+                            <span class="fa fa-star white-star checked-yellow"></span>
+                        <span class="fa fa-star white-star checked-yellow"></span>
+                        <span class="fa fa-star white-star checked-yellow"></span>
+                        <span class="fa fa-star white-star unchecked-grey"></span>
+                        <span class="fa fa-star white-star unchecked-grey"></span><br/>
+                        </div>
+                        <p class="ml-4 mr-4 pt-2">The food was alright, the service was great. I'd say for the price, it's worth trying once. If you do, I recommend trying the mascarpone and the grilled pineapple chicken.</p>
+                    </div>
+                    <div class="pb-5"></div>
+                </div>
+            </div>
+        </div>
+        <!-- second column -->
+        <div class="col-6 col-md-4 pl-4">
+            <div class="pt-3 position-relative">
+                <div class="cal-box">
+                    <h5 class="text-center font-weight-bold pt-3">Make a Reservation</h5>
+                    <label for="start" class="pl-5 pt-3 font-weight-bold pr-2">Date</label>
+                    <input type="date" id="start" name="trip-start"
+                        value="2021-12-01"
+                        min="2018-01-01" max="2022-05-21"><br/>
+                    <label for="time" class="pl-5 font-weight-bold pr-2">Time</label>
+                    <input type="time" id="start" name="trip-start"
+                        value="2021-12-01"
+                        min="2018-01-01" max="2022-05-21"><br/>
+                    <label for="party-size" class="pl-5 font-weight-bold pr-2">Party</label>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>  
+                    <br/>
+                    <div class="text-center pt-2"> 
+                        <a href="reservation.html"><button type="button" class="reserve-button">Find a Table</button></a>
+                    </div>
+                    
+                </div>
+                <div class="wait-box">
+                    <h5 class="text-center font-weight-bold pt-4">Current Wait Times</h5>
+                    <div class="text-center">
+                        <p id="time"class="font-weight-bold pt-2 d-inline-block"></p>
+                        <p class="font-weight-normal pl-3 d-inline-block">30-60 mins</p>
+                        <a href="waitlist.html"><button class="waitlist-button-g">Add name to waitlist</button></a>
+                    </div>
+                    <script>
+                        var dt = new Date();
+                        document.getElementById('time').innerHTML=dt.toLocaleTimeString();;
+                    </script>
+                </div>
+            </div>
+    
+
+        </div>
+      </div>
+</body>
+</html>
+
+<script type="text/javascript" src="./review-popup.js"></script>

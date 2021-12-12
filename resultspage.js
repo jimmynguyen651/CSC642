@@ -33,7 +33,7 @@ filtersicon.onclick = function() {
 
 flexbox.onclick = function() {
     // PUT RESTAURANT PAGE HERE
-     window.location.href = "restaurant-page.html"
+     window.location.href = "restaurant-page-2.html"
 }
 
 confirmfilters.onclick = function() {
