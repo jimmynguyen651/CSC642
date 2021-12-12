@@ -108,9 +108,13 @@ function addReview2() {
         firstPageReview.innerHTML =
         `<div id="done">
             <div id="redirectToSignup">
-            <h3 class="pt-2 pl-2 font-weight-bold text-center">Log in to post your review</h3>
-            <p class="text-center">New here? <a id="signup_redirect" href="#">Sign up!</a></p>
+            <h3 class="pt-2 pl-2 font-weight-bold text-center">Sign up to post your review</h3>
+            <p class="text-center">Have an account? <a id="signup_redirect" href="#">Log in here!</a></p>
             <div class="pt-2 pl-3">
+                <label class="font-weight-bold d-inline-block">First and Last Name</label><p class="red-text">*</p><br/>
+                <div class="mr-3">
+                    <input id="email_pop" type="text" placeholder="First and Last Name" class="input-full margin-m-up"/>
+                </div>
                 <label class="font-weight-bold d-inline-block">Email</label><p class="red-text">*</p><br/>
                 <div class="mr-3">
                     <input id="email_pop" type="email" placeholder="Email" class="input-full margin-m-up"/>
@@ -119,15 +123,18 @@ function addReview2() {
                 <div class="mr-3">
                     <input id="password_pop" type="password" placeholder="Password" class="input-full margin-m-up"/>
                 </div>
+                <label class="font-weight-bold pt-2 d-inline-block">Confirm Password</label><p class="red-text">*</p><br/>
+                <div class="mr-3">
+                    <input id="password_pop" type="password" placeholder="Confirm Password" class="input-full margin-m-up"/>
+                </div>
             </div>
-            <input id="posted" type="button" value="Login and post" class="search-button-3"/>
+            <input id="posted" type="button" value="Sign up and post" class="search-button-3"/>
             </div>
         </div>`;
     }
 
     let posted = document.getElementById("posted");
 
-    let signup_redirector = document.getElementById("signup_redirect");
 
 
 
@@ -136,6 +143,9 @@ function addReview2() {
         document.getElementById("done").innerHTML =
         `<h2 class="font-weight-bold text-center pt-4 pl-2 pr-2">Thank you for sharing your experience with us!</h2>
         <p class="text-center">You can now close this pop up.</p>`;
+
+        let loginNav = document.getElementById("loginRestaurant");
+        loginNav.innerHTML = "Log out";
     }
 
     if (review_pop.length > 0 && oneStar_pop) {
