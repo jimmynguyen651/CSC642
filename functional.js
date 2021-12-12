@@ -145,6 +145,7 @@ function addReview2() {
         <p class="text-center">You can now close this pop up.</p>`;
 
         let loginNav = document.getElementById("loginRestaurant");
+        loginNav.href = "./index.html";
         loginNav.innerHTML = "Log out";
     }
 
