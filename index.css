@@ -534,3 +534,33 @@ a
     border-width: 1px;
     border-radius: 2px;
 }
+
+.full {
+    padding-top: -10px;
+    height: 28px !important;
+    width: 30px !important;
+    border-style: solid;
+    border-width: 1px;
+    vertical-align: center !important;
+}
+
+.pad-r {
+    margin-left: -10px !important;
+}
+
+.pad-r2 {
+    margin-left: -32px !important
+}
+
+.input-mid {
+    /* height: 25px !important; */
+    width: 160px !important;
+    /* margin-left: - */
+}
+
+.button-small {
+    width: 31px !important;
+    height: 31px !important;
+    justify-content: center;
+    /* padding-right: 2px; */
+}
